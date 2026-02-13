@@ -1,10 +1,10 @@
-# AUGMS - Advanced University Garage Management System
+# Databse Backend for Automated University Garage Management System
 
-A sophisticated parking management system designed to demonstrate comprehensive data storage and retrieval capabilities through a practical web interface.
+A comprehensive parking management system designed to demonstrate data storage and retrieval capabilities through a practical web interface.
 
 ## Overview
 
-This project showcases advanced data management techniques through a fully functional parking management system. The web interface serves as a practical demonstration of complex database interactions, including multi-table relationships, transaction processing, and real-time data operations.
+This project showcases data management techniques through a fully functional parking management system. The web interface serves as a practical demonstration of the database interactions, including multi-table relationships, transaction processing, and real-time data operations.
 
 ## System Architecture
 
@@ -81,38 +81,6 @@ AUGMS - Database/
 - **Indexing Strategy**: Primary keys and foreign key indexes
 - **Data Types**: Appropriate SQL Server data types
 - **Constraints**: Business rules enforced at database level
-
-### Query Complexity Examples
-
-**Multi-table Join Analysis:**
-```sql
--- Comprehensive payment and service analysis
-SELECT i.invoice_id, p.payment_id, u.name, v.license_plate
-FROM Invoice i
-LEFT JOIN Payment p ON i.invoice_id = p.invoice_id
-LEFT JOIN Service_request sr ON i.request_id = sr.request_id
-LEFT JOIN Users u ON sr.user_id = u.user_id
-LEFT JOIN Vehicle v ON sr.vehicle_id = v.vehicle_id
-```
-
-**Advanced Subquery Filtering:**
-```sql
--- Users with high activity
-SELECT name FROM Users
-WHERE user_id IN (
-    SELECT user_id FROM Service_request
-    GROUP BY user_id HAVING COUNT(request_id) > 1
-)
-```
-
-**Aggregation with Grouping:**
-```sql
--- Revenue analysis by service type
-SELECT st.service_name, COUNT(sr.request_id) AS Total_Requests
-FROM Service_type st
-JOIN Service_request sr ON st.service_id = sr.service_id
-GROUP BY st.service_name
-```
 
 ## Setup Requirements
 
