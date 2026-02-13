@@ -2,6 +2,9 @@
 
 A comprehensive parking management system designed to demonstrate data storage and retrieval capabilities through a practical web interface.
 
+<img width="1907" height="908" alt="AUGMS - Admin Dashboard" src="https://github.com/user-attachments/assets/d570274d-33a4-47e6-b263-0e647c7f46a1" />
+
+
 ## Overview
 
 This project showcases data management techniques through a fully functional parking management system. The web interface serves as a practical demonstration of the database interactions, including multi-table relationships, transaction processing, and real-time data operations.
